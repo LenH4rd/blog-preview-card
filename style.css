@@ -1,0 +1,222 @@
+@font-face {
+  font-family: 'Figtree';
+  font-weight: 600;
+  src: local('Figtree'), local('Figtree'),
+    url(assets/fonts/Figtree-VariableFont_wght.ttf),
+    url(assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: 'Figtree';
+  font-weight: 800;
+  src: local('Figtree Semibold'), local('Figtree-SemiBold'),
+    url(assets/fonts/Figtree-VariableFont_wght.ttf),
+    url(assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
+}
+
+:root {
+  --clr-primary-Yellow: hsl(47, 88%, 63%);
+
+  --clr-neutral-White: hsl(0, 0%, 100%);
+  --clr-neutral-Grey: hsl(0, 0%, 50%);
+  --clr-neutral-Black: hsl(0, 0%, 7%);
+
+  --fs-primary: 1rem;
+}
+
+/*simple CSS reset*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  shape-margin: 0.75rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/*Screen Readers*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: hidden;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+body {
+  font-family: 'Figtree', sans-serif;
+  font-size: 0.8688rem;
+  color: var(--clr-neutral-Grey);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--clr-primary-Yellow);
+}
+
+main {
+  background-color: var(--clr-neutral-White);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  padding: 1.5rem 1.5rem;
+  margin: 0 1.5rem;
+
+  border-radius: 1.25rem;
+  border: 0.125rem solid var(--clr-neutral-Black);
+
+  box-shadow: 0.5rem 0.5rem 0 var(--clr-neutral-Black);
+
+  max-width: 24rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.illustration {
+  border-radius: 0.625rem;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.marked {
+  background-color: var(--clr-primary-Yellow);
+  text-align: center;
+  width: 30%;
+  font-weight: 800;
+  color: var(--clr-neutral-Black);
+
+  padding: 0.25rem 0;
+
+  border-radius: 0.3125rem;
+}
+
+.title p {
+  color: var(--clr-neutral-Black);
+}
+
+.link {
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.4375rem;
+  color: var(--clr-neutral-Black);
+}
+
+.link:hover {
+  color: var(--clr-primary-Yellow);
+}
+
+figure {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+figure img {
+  width: 2rem;
+}
+
+figcaption {
+  color: var(--clr-neutral-Black);
+  font-weight: 800;
+  font-size: 1.125rem;
+}
+
+@media (width >= 40rem) {
+  body {
+    font-size: var(--fs-primary);
+  }
+}
