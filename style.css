@@ -1,15 +1,15 @@
 @font-face {
-  font-family: 'Figtree';
+  font-family: "Figtree";
   font-weight: 600;
-  src: local('Figtree'), local('Figtree'),
+  src: local("Figtree"), local("Figtree"),
     url(assets/fonts/Figtree-VariableFont_wght.ttf),
     url(assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
 }
 
 @font-face {
-  font-family: 'Figtree';
+  font-family: "Figtree";
   font-weight: 800;
-  src: local('Figtree Semibold'), local('Figtree-SemiBold'),
+  src: local("Figtree Semibold"), local("Figtree-SemiBold"),
     url(assets/fonts/Figtree-VariableFont_wght.ttf),
     url(assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
 }
@@ -47,8 +47,8 @@ html {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -127,7 +127,7 @@ textarea:not([rows]) {
 }
 
 body {
-  font-family: 'Figtree', sans-serif;
+  font-family: "Figtree", sans-serif;
   font-size: 0.8688rem;
   color: var(--clr-neutral-Grey);
 
@@ -149,7 +149,7 @@ main {
   margin: 0 1.5rem;
 
   border-radius: 1.25rem;
-  border: 0.125rem solid var(--clr-neutral-Black);
+  border: 0.0625rem solid var(--clr-neutral-Black);
 
   box-shadow: 0.5rem 0.5rem 0 var(--clr-neutral-Black);
 
